@@ -16,8 +16,8 @@ function Validator(options){
     if(formElement){
         options.rules.forEach(function (rule){
             var inputElement = formElement.querySelector(rule.selector)
-            
 
+           
             if(inputElement){
                 //xử lý blur
                 inputElement.onblur = function(){
@@ -36,7 +36,7 @@ function Validator(options){
 }
 
 
-// nguyên tắc các rule khi có lỗi thì trả ra messae lỗi 
+// nguyên tắc các rule khi có lỗi thì trả ra message lỗi 
 //hợp lệ không trả về
 Validator.isRequired = function(selector){
     return{
